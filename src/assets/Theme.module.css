@@ -1,0 +1,211 @@
+/* Input Field and textfield */
+
+.inputFieldStyle input,
+.inputFieldStyle textarea,
+.inputFieldErrorStyle > input,
+.inputFieldErrorStyle > textarea,
+.inputFieldSuccessStyle input,
+.inputFieldSuccessStyle textarea {
+  border: 1px solid #5b5b5b;
+  border-radius: 6px;
+  background: transparent;
+  color: #b1b1b1;
+  padding: 15px;
+  max-width: 452px;
+  font-size: 14px;
+}
+
+.inputFieldStyle input:focus,
+.inputFieldStyle textarea:focus,
+.inputFieldErrorStyle input:focus,
+.inputFieldErrorStyle textarea:focus,
+.inputFieldSuccessStyle input:focus,
+.inputFieldSuccessStyle textarea:focus {
+  background: #5ca8ff2d;
+  border: 1px solid #5ca8ff;
+}
+
+.inputFieldLabelStyle {
+  font-size: 14px;
+  line-height: 21px;
+  color: #f1f1f1;
+}
+
+.inputFieldErrorStyle input,
+.inputFieldErrorStyle textarea {
+  background-color: rgba(196, 110, 110, 0.12);
+  color: #ffffff;
+}
+
+.inputFieldStyle input,
+.inputFieldStyle textarea {
+  border: 1px solid #5b5b5b;
+  border-radius: 6px;
+  background: transparent;
+  height: "46px";
+  color: #b1b1b1;
+  padding: 15px;
+}
+
+.inputFieldStyle input:focus {
+  background: #5ca8ff2d;
+  border: 1px solid #5ca8ff;
+}
+.inputFieldStyle textarea:focus {
+  background: #5ca8ff2d;
+  border: 1px solid #5ca8ff;
+}
+
+.inputFieldErrorStyle input,
+.inputFieldErrorStyle textarea {
+  border: 1px solid #5ca8ff;
+  background-color: rgba(196, 110, 110, 0.12);
+  color: #ffffff;
+  padding: 15px;
+}
+/* ISelect */
+
+.selectClass {
+  border: 1px solid #5b5b5b;
+
+  padding: 15px;
+  max-width: 452px;
+  border-radius: 6px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  font-size: 14px;
+  background: transparent;
+  color: #b1b1b1;
+  transition: all 0.4s ease;
+}
+
+.selectPlaceholderClass {
+  color: #b1b1b1;
+}
+
+.selectOpenedClass {
+  border-width: 1px;
+  border-style: solid;
+  border: 1px solid #5ca8ff;
+  border-radius: 6px;
+  background-color: #242424;
+  width: calc(100% + 1.9px);
+  left: -0.95px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  scrollbar-color: #b1b1b1 transparent; /* Only Firefox */
+  scrollbar-width: 2px;
+}
+
+.selectOpenedClass::-webkit-scrollbar {
+  width: 2px; /* Chrome */
+}
+
+.selectOpenedClass::-webkit-scrollbar-thumb {
+  background: #5ca8ff2d;
+}
+
+.selectOptionClass {
+  padding: 15px;
+  color: #b1b1b1;
+}
+
+.selectOptionClass:hover {
+  background: #5ca8ff2d;
+}
+/* checkBox */
+
+.checkBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #ffffff;
+  padding-block: 20px;
+}
+
+/*toggle*/
+
+.mainContainer {
+  display: flex;
+  align-items: center;
+}
+.container {
+  position: relative;
+  display: flex;
+}
+.toggleSwitch {
+  width: 45px;
+  display: inline-block;
+  text-align: left;
+  top: 8px;
+}
+
+.checkbox {
+  display: none;
+}
+.wrapper {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0 solid #5ca8ff;
+  border-radius: 20px;
+}
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.inner:before,
+.inner:after {
+  float: left;
+  width: 45px;
+  height: 25px;
+  padding: 0;
+  line-height: 36px;
+  color: #fff;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.inner:before {
+  content: "";
+  padding-left: 10px;
+  background: #5ca8ff;
+  color: #fff;
+}
+.inner:after {
+  content: "";
+  padding-right: 10px;
+  background-color: #bbb;
+  color: #fff;
+  text-align: right;
+}
+.switch {
+  width: 24px;
+  margin: 2px;
+  height: 21px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 17px;
+  border: 0 solid #5ca8ff;
+  border-radius: 50%;
+  transition: all 0.3s ease-in 0s;
+}
+.checkbox:checked + .wrapper .inner {
+  margin-left: 0;
+}
+.checkbox:checked + .wrapper .switch {
+  right: 0px;
+}

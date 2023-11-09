@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.container h3 {
+  color: #5ca8ff;
+}
+
+.toggleContainer {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  padding-block: 20px;
+  color: #ffffff;
+  opacity: 0.9;
+  border-bottom: 1px solid #5ca8ff;
+}
+
+.toggleContainer:last-child {
+  border-bottom: none;
+}
+
+.toggleContainer h5 {
+  font-weight: 500;
+}

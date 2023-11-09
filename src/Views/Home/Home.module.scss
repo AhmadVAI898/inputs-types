@@ -1,0 +1,33 @@
+.svg {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: url(../../assets/Biagio.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -100vh;
+  transform-style: preserve-3d;
+  transform-origin: bottom center;
+}
+
+$total: 10;
+@for $i from 1 through $total {
+  $scale: random(2) - 0.4;
+
+  .svg:nth-child(#{$i}) {
+    left: random(120) * 1% - 20;
+    animation: raise#{$i} 6 + random(15) + s linear infinite;
+    animation-delay: random(5) - 5 + s;
+    transform: scale(0.3 * $i - 0.6) rotate(random(360) + deg);
+    z-index: $i - 7;
+
+    @keyframes raise#{$i} {
+      to {
+        bottom: 150vh;
+        transform: scale(0.3 * $i - 0.6) rotate(random(360) + deg);
+      }
+    }
+  }
+}
